@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>Searchable Map Template Demo</title>
+    <title>AmeriCares US Partner Locations</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta content='' name='description' />
-    <meta content='' name='author' />
+    <meta content='' name='AmeriCares US Partner Locations' />
+    <meta content='' name='AmeriCares Safety Net Center' />
     <!-- Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
@@ -15,28 +15,10 @@
     <![endif]-->
   </head>
   <body>
-    <div class='navbar navbar-default navbar-static-top'>
-      <div class='container-fluid'>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class='navbar-brand' href='index.html'>Searchable Map Template</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class='active'><a href="index.html">Map</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
-          <p>This is a demo of <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> using Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. Use this section to give a little context to your map.</p>
+          <p>Enter a city or zipcode to find an AmeriCares Partner site near you. All AmeriCares partners provide care to their patients regardless of their ability to pay. </p>
           <div class='well'>
             <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -48,8 +30,6 @@
               <label>
                 within
                 <select id='search_radius'>
-                  <option value='400'>2 blocks</option>
-                  <option value='805'>1/2 mile</option>
                   <option value='1610'>1 mile</option>
                   <option value='3220'>2 miles</option>
                 </select>
@@ -57,25 +37,6 @@
             </p>
 
             <br />
-            <h4>Custom filters and views</h4>
-            <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
-            <div class='row'>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-checkboxes'>Checkboxes</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-radiobuttons'>Radio buttons</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-drop-down-lists'>Drop down lists</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-textsearches'>Text searches</a></li>
-                </ul>
-              </div>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-sliders'>Sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-date-sliders'>Date sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results'>Results lists</a></li>
-                </ul>
-              </div>
-            </div>
             <br />
             <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
@@ -97,7 +58,7 @@
           </noscript>
           <div id='map_canvas'></div>
           <p class='pull-right'>
-            <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> by <a href='http://derekeder.com'>Derek Eder</a>.
+            <a href='http://dominionstrategies.com'>Dominion Strategies</a> (with template by <a href='http://derekeder.com'>Derek Eder</a>).
         </p>
         </div>
       </div>
@@ -119,11 +80,11 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-            googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
-            locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
-            locationScope:      "chicago"
+            fusionTableId:      "1VruXSPSIEVd5fsd-JRfdfgqDpfpC6Sln75u8xbWT",
+            googleApiKey:       "AIzaSyDsHsVP2l3SXrr_ykquk5272BEQ_pm4UXk",
+            locationColumn:     "full address",
+            map_center:         [37.09024, -95.712891],
+            locationScope:      "united states"
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
