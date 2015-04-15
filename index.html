@@ -58,7 +58,7 @@
           </noscript>
           <div id='map_canvas'></div>
           <p class='pull-right'>
-            <a href='http://dominionstrategies.com'>Dominion Strategies</a> (with template by <a href='http://derekeder.com'>Derek Eder</a>).
+            
         </p>
         </div>
       </div>
@@ -82,9 +82,11 @@
           var myMap = new MapsLib({
             fusionTableId:      "1VruXSPSIEVd5fsd-JRfdfgqDpfpC6Sln75u8xbWT",
             googleApiKey:       "AIzaSyDsHsVP2l3SXrr_ykquk5272BEQ_pm4UXk",
-            locationColumn:     "full address",
-            map_center:         [37.09024, -95.712891],
-            locationScope:      "united states"
+            locationColumn:     "'full address'",
+            map_center:         [36.1523015, -95.8780106],
+            locationScope:      "united states",
+            searchRadius:       8000,
+            defaultZoom:        4
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
