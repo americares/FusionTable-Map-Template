@@ -45,19 +45,19 @@ Follow the steps below and you'll be in business with your own map.
 1. Create a Fusion Table ([here's a great tutorial](https://support.google.com/fusiontables/answer/2527132?hl=en&topic=2573107&ctx=topic))
 1. Make sure at least one column is set to a type of Location and that Fusion Tables has geocoded it
 1. Set the Fusion Table to be publicly visible (via the Share button in the upper right) and make sure 'Allow Download' is enabled.
-1. Turn on the Fusion Tables API
-   1. Go to the [Google APIs Console](https://code.google.com/apis/console/)
-   2. Click 'Enable an API' and set __Fusion Tables API__ to 'On'
-   3. On the Credentials page, create a new __Public API access__ key
-   4. Select __Browser key__
-   5. Leave the ACCEPT REQUESTS FROM THESE HTTP REFERERS __blank__ and click __Create__
-   6. Copy the API KEY, which should look something like `AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY`
-1. At the bottom of index.html, set your map options ([see the full list of options](#mapslib-options))
+1. Create your own Google Maps JavaScript API key to replace the default in the Map Options section of the index.html file above. By inserting your own key, Google will allow 25,000 requests per day to your Searchable Map.
+  1. Go to the [Google Developers Maps JavaScript API](https://console.developers.google.com/projectselector/apis/credentials) page and click the Get a Key button
+  1. On the Google Developers Console page, select Create a New Project and press Continue
+  1. On the Credentials page, create a key, which should look something like `AIzaSyBNVkiNzErPTEGpxWp0cvdqDMd2BxD-S50`.
+  1. Copy and paste your key into the Map Options section of the index.html file as described above.
+  1. To find or edit your key in the future, go back to the Google Developers Console page
+1. Download or clone this project and fire up your text editor of choice. Open up `index.html` and set your map options at the bottom of the file ([see the full list of options](#mapslib-options))
    1. **fusionTableId** - the ID of your Fusion Table (found in Fusion Tables under File => About this table)
    1. **googleApiKey** - the API key from your [Google API Console](https://code.google.com/apis/console/)
    1. **locationColumn** - the name of your location column in your Fusion Table
    1. **map_center** - the lat/long you want your map to center on ([find yours here](http://www.itouchmap.com/latlong.html))
    1. **locationScope** - the area you want to limit searches to (set to 'chicago' by default)
+1. **New** Get a Google Maps API key. [Follow these instructions](https://developers.google.com/maps/documentation/javascript/get-api-key) and replace the key on this line of `index.html`: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=[YOUR KEY HERE]"></script>`
 1. Add/modify additional filters to maps_lib.js. This will depend on the data you are trying to map. Take a look at the [wiki](https://github.com/derekeder/FusionTable-Map-Template/wiki) for [filter examples](https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples) and [list views](https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results) to get started.
 1. Upload this map and all the supporting files (css, fonts, images and js folders) to your site 
 
