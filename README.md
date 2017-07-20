@@ -218,7 +218,7 @@ Ask for help on our [Fusion Table Map Template Google Group](https://groups.goog
 
 Notice a bug or want to add a feature? [Open an issue](https://github.com/derekeder/FusionTable-Map-Template/issues) or submit a pull request like so:
  
-1. Fork the project.
+1. Fork the project.    
 1. Make your feature addition or bug fix.
 1. Commit and send me a pull request.
 
